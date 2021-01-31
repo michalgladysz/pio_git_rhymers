@@ -4,7 +4,8 @@ public class DefaultCountingOutRhymer {
 
   private static final int VALUE = -1;
   private static final int SIZE = 12;
-  final private int[] numbers = new int[getSIZE()];
+  private static final int CAPACITY = 11;
+  private final int[] numbers = new int[getSIZE()];
   private int total = getVALUE();
 
   public void countIn(int in) {
@@ -17,7 +18,7 @@ public class DefaultCountingOutRhymer {
   }
 
   public boolean isFull() {
-    return getTotal() == 11;
+    return getTotal() == getCAPACITY();
   }
 
   protected int peekaboo() {
@@ -42,5 +43,9 @@ public class DefaultCountingOutRhymer {
 
   public static int getSIZE() {
     return SIZE;
+  }
+
+  public static int getCAPACITY() {
+    return CAPACITY;
   }
 }
